@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/animate.css">
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -78,6 +80,29 @@
   background-color: #ccc;
   animation: typing-cursor 0.5s ease-in-out infinite;
 }
+
+.accordion-item,
+.accordion-button,
+.accordion-body {
+    color: #fff;
+}
+
+
+.accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.accordion-button {
+    background-color: transparent;
+    color: inherit;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: inherit;
+}
+
   
 @keyframes typing {
   from {
@@ -95,6 +120,14 @@
   to {
     width: 0;
   }
+}
+
+.progress-bar {
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 0.8rem;
+    align-items: flex-end;
+    padding-top: 2px;
 }
 
 
@@ -135,6 +168,7 @@
 
 
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
@@ -148,9 +182,9 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>A propos</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resumé</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projets</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -214,7 +248,7 @@
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a --> 
-							<a href="https://github.com/jordanTchamedeu" class="btn btn-white btn-outline-white py-3 px-4">Mes travaux</a></p>
+							<a href="https://github.com/jordanTchamedeu" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -242,52 +276,249 @@
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
-										<p><span class="title-s">Nom: </span> <span>Tchamedeu Jordan</span></p>
-										<p><span class="title-s">Origine: </span> <span>Cameroun</span></p>
-										<p><span class="title-s">Age: </span> <span>21 ans</span></p>
-										<p><span class="title-s">Adresse: </span> <span>Nantes , France</span></p>
+										<p><span class="title-s">Name: </span> <span>Tchamedeu Jordan</span></p>
+										<p><span class="title-s">Origin: </span> <span>Cameroon</span></p>
+										<p><span class="title-s">Age: </span> <span>22 years</span></p>
+										<p><span class="title-s">Adress: </span> <span>Île-de-France , France</span></p>
 									  </div>
 									</div>
 								  </div>
 
-								<div class="skill-mf">
-									<p class="title-s">Compétences</p>
-									<span>SQL</span> 
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
+								  <div class="skill-mf">
+									<p class="title-s">Skills & Expertise</p>
+								  
+									<div class="accordion" id="skillsAccordion">
+								  
+									  <!-- Programming -->
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="headingProgramming">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProgramming" aria-expanded="false" aria-controls="collapseProgramming">
+											Programming
+										  </button>
+										</h2>
+										<div id="collapseProgramming" class="accordion-collapse collapse" aria-labelledby="headingProgramming" data-bs-parent="#skillsAccordion">
+										  <div class="accordion-body">
+											<span>Python</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 95%">95%</div>
+											</div>
+											<span>R</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>Java</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>SQL</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>HTML</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>CSS</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>JavaScript</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 80%">80%</div>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								  
+									  <!-- Data Science -->
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="headingDataScience">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataScience" aria-expanded="false" aria-controls="collapseDataScience">
+											Data Science
+										  </button>
+										</h2>
+										<div id="collapseDataScience" class="accordion-collapse collapse" aria-labelledby="headingDataScience" data-bs-parent="#skillsAccordion">
+										  <div class="accordion-body">
+											<span>Machine Learning</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>Deep Learning</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>NLP</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>MLOps</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 80%">80%</div>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								  
+									  <!-- Gen AI -->
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="headingGenAI">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenAI" aria-expanded="false" aria-controls="collapseGenAI">
+											Generative AI
+										  </button>
+										</h2>
+										<div id="collapseGenAI" class="accordion-collapse collapse" aria-labelledby="headingGenAI" data-bs-parent="#skillsAccordion">
+										  <div class="accordion-body">
+											<span>LLM</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>RAG</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Ollama</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 80%">80%</div>
+											</div>
+											<span>LangChain</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Hugging Face</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Data Preprocessing</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Transformers</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								  
+									  <!-- Database -->
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="headingDatabase">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDatabase" aria-expanded="false" aria-controls="collapseDatabase">
+											Database
+										  </button>
+										</h2>
+										<div id="collapseDatabase" class="accordion-collapse collapse" aria-labelledby="headingDatabase" data-bs-parent="#skillsAccordion">
+										  <div class="accordion-body">
+											<span>MySQL</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>PostgreSQL</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>SQL Server</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Chroma DB</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 80%">80%</div>
+											</div>
+											<span>Pinecone</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 70%">70%</div>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								  
+									  <!-- Libraries -->
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="headingLibraries">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLibraries" aria-expanded="false" aria-controls="collapseLibraries">
+											Libraries
+										  </button>
+										</h2>
+										<div id="collapseLibraries" class="accordion-collapse collapse" aria-labelledby="headingLibraries" data-bs-parent="#skillsAccordion">
+										  <div class="accordion-body">
+											<span>Scikit-Learn</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>Spacy</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>TensorFlow</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>PyTorch</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>FastAPI</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Matplotlib</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Seaborn</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								  
+									  <!-- Tools & Platforms -->
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="headingTools">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
+											Tools & Platforms
+										  </button>
+										</h2>
+										<div id="collapseTools" class="accordion-collapse collapse" aria-labelledby="headingTools" data-bs-parent="#skillsAccordion">
+										  <div class="accordion-body">
+											<span>Git</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>GitLab</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Docker</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Hugging Face</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+											<span>Jupyter</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>VSCode</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 90%">90%</div>
+											</div>
+											<span>Tableau</span>
+											<div class="progress mb-2">
+											  <div class="progress-bar d-flex justify-content-end pe-1" style="width: 85%">85%</div>
+											</div>
+										  </div>
+										</div>
+									  </div>
+								  
 									</div>
-									
-									<span>Git & Github</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>NLP, LLM</span> 
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Analyse statistique avec R</span> 
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning & Deep Learning</span> 
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
+								  </div>
+								  
+								  
 							</div>
 						</div>
 					</div>
@@ -297,17 +528,17 @@
 							<div class="col-md-12 heading-section ftco-animate">
 								
 								<h1 class="big">About</h1>
-								<h2 class="mb-4">A propos de moi</h2>
+								<h2 class="mb-4">About Me</h2>
 								
-								<p>Je suis Jordan Tchamedeu, jeune étudiant en informatique et Passionné par la data science , et le traitement automatique du language naturel, je développe mes compétences dans ces domaines extrêmement attrayants pour résoudre des problèmes complexes. Mon objectif est de contribuer à des projets innovants où mes connaissances en programmation, statistiques et machine learning pourront faire une différence concrète.</p>
+								<p>I am Jordan Tchamedeu, a young graduate with a Master's degree, specialized in Machine Learning and Natural Language Processing. I have a strong passion for data, artificial intelligence, and generative AI, and I aim to apply my skills to innovative projects where data-driven solutions make a real impact.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profil:</span> <span>Data Science</span></li>
-									<li class="d-flex"><span>Domaines:</span> <span>Sport , Santé, E-commerce, Marketing Digital ,etc</span></li>
-									<li class="d-flex"><span>Formation:</span> <span>Master Scientifique</span></li>
-									<li class="d-flex"><span>Langue:</span> <span>Francais, Anglais</span></li>
-									<li class="d-flex"><span>Outils BI:</span> <span>Microsoft Power BI,  &amp; Tableau</span></li>
-									<li class="d-flex"><span>Atouts:</span> <span>Coopératif , Autonome, Rigoureux</span></li>
-									<li class="d-flex"><span>Intérêt:</span> <span>Voyage, Football, Actualité Technologique</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>Data Science</span></li>
+									<li class="d-flex"><span>Domaines:</span> <span>Sport, Health, E-commerce, Digital Marketing ,etc</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master of Science</span></li>
+									<li class="d-flex"><span>Language:</span> <span>French, English</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI,  &amp; Tableau</span></li>
+									<li class="d-flex"><span>Others Skills:</span> <span>Cooperative, Autonomous, Rigorous</span></li>
+									<li class="d-flex"><span>Interests:</span> <span>Travel, Football, Technology News</span></li>
 									
 								</ul>
 							</div>
@@ -318,7 +549,7 @@
 							<div class="text">
 								<p class="mb-4">
 									<span class="number" data-number="10">0</span> <span>+</span>
-									<span>&nbsp; Projets réalisés</span>
+									<span>&nbsp; Projects Completed</span>
 								</p>
 								<p><a href="https://www.linkedin.com/in/jordan-steve-tchamedeu-0bbab1262/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
 							</div>
@@ -333,336 +564,498 @@
 
 	
     <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resumé</h2>
-            <p>Je suis une personne coopérative, rigoureuse et diligente, capable de bien s'intégrer dans une équipe pour mener
-				à bien des projets . Une règle d'or chez moi " je ne recule devant aucun défis".</p>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Expériences</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">01/2024-06/2024</span>
-						<h2>Contributeur sur un projet de recherche</h2>
-						<span class="position">LS2N (Laboratoire des sciences du Numérique)</span>
-						<p class="mt-4">Le LS2N (Laboratoire des Sciences du Numérique de Nantes) est un laboratoire de recherche en sciences du numérique situé à Nantes, France 
-							<ul>
-								<li>projet de recherche nommé "Explaining Graph Neural Network".</li>
-								<li>Comprendre ce que sont les réseaux de neurones graphiques (GNN).</li>
-								<li>Etudier l'état de l'art de l'explication du GNN.</li>
-								<li>Fournir quelques expériences et comparaisons en utilisant les approches existantes..</li>
-								<li>Développer une présentation Web présentant les résultats, en utilisant la bibliotheque Flask..</li>
-							</ul>
-						</p>
-					</div>
-
+		<div class="container">
+	
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>I am a cooperative, rigorous, and diligent person, capable of integrating well into a team to carry out projects. A golden rule for me: "I never back down from any challenge".</p>
 				</div>
+			</div>
+	
+			<!-- EXPERIENCE -->
+<div class="row justify-content-center text-center">
+	<div class="col-md-10">
+		<h1 class="big-4">Experience</h1>
+		<div class="underline"></div>
+	</div>
+</div>
+<br>
 
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">02/2022-05/2022</span>
-						<h2>Stage de fin de formation à L'ENS</h2>
-						<span class="position">Lycée D'elig essono</span>
-						<p class="mt-4">Le Lycée D'elig essono est un lycée Public d'enseignement secondaire de la ville de Yaoundé au Cameroun. 
-							<ul>
-								<li>Dispenser des cours d'informatique, couvrant des sujets tels que la programmation, les réseaux, la cybersécurité, la bureautique, etc, aux élèves des classes de 6e en Tle.</li>
-								<li>Développer des supports de cours (présentations, documents, exercices).</li>
-								<li>Participations aux assemblées génerales des profésseurs.</li>
-								<li>Communiquer régulièrement avec les parents au sujet des progrès et des difficultés des élèves.</li>
-								<li>Préparer et corriger des examens, des tests et des travaux pratiques.</li>
-							</ul>
-						</p>
-					</div>
+<div class="row justify-content-center position-relative">
+	<div class="col-md-10 position-relative">
+		<button class="exp-prev nav-btn btn btn-outline-primary btn-sm">&#8592;</button>
+		<button class="exp-next nav-btn btn btn-outline-primary btn-sm">&#8594;</button>
 
+		<!-- EXPERIENCE 1 -->
+		<div class="resume-wrap ftco-animate experience-slide active">
+			<div class="d-flex align-items-center mb-2">
+				<img src="images/cramif.jpg" alt="CRAMIF" style="height:60px; margin-right:15px; background: transparent;">
+				<div>
+					<h5 class="text-uppercase mb-1">CRAMIF, PARIS, FRANCE</h5>
+					<small class="text-muted">September 2024 - August 2025</small>
 				</div>
 			</div>
 
-		<br>
-		<br>
+			<p><strong>ROLE :</strong> Data Scientist</p>
 
-		<div class="row">
-			<h1 class="big-4">Formations</h1>
-			<div class="underline"></div>
+			<p><strong>📌 OBJECTIVES :</strong></p>
+			<ul>
+				<li>Development of a web app for automatic email replies.</li>
+				<li>Training & evaluation of classification models.</li>
+				<li>Design and feeding of PostgreSQL database.</li>
+				<li>Development & deployment of REST API with Flask.</li>
+				<li>Implementation of internal chatbot based on LLaMA 8B.</li>
+				<li>Streamlit interface for internal testing.</li>
+				<li>Documentation, result analysis & presentations.</li>
+			</ul>
+
+			<p><strong>🛠️ TECHNOLOGIES & TOOLS :</strong></p>
+			<div class="mb-3">
+				<span class="badge tool-badge bg-primary">Python</span>
+				<span class="badge tool-badge bg-success">LLM</span>
+				<span class="badge tool-badge bg-danger">SQL</span>
+				<span class="badge tool-badge bg-warning text-dark">PostgreSQL</span>
+				<span class="badge tool-badge bg-info">Flask</span>
+				<span class="badge tool-badge bg-secondary">Streamlit</span>
+				<span class="badge tool-badge bg-danger">Machine Learning</span>
+				<span class="badge tool-badge bg-warning text-dark">Git</span>
+				<span class="badge tool-badge bg-info">Spacy</span>
+				<span class="badge tool-badge bg-secondary">Gitlab</span>
+			</div>
 		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-4">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023-2025</span>
-    					<h2>Master Data Science</h2>
-    					<span class="position">Université de Nantes, France</span>
-						<p class="mt-4">Nantes Université - UFR Sciences et Techniques.</p>
-    				</div>
-    			</div>
 
-    			<div class="col-md-4">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2023</span>
-    					<h2>Licence Informatique</h2>
-    					<span class="position">Université de rennes I, France</span>
-    					<p class="mt-4">UFR informatique et électronique de l'université de Rennes I.</p>
-						
-    				</div>
+		<!-- EXPERIENCE 2 -->
+		<div class="resume-wrap ftco-animate experience-slide">
+			<div class="d-flex align-items-center mb-2">
+				<img src="images/ls2n.jpg" alt="LS2N" style="height:60px; margin-right:15px; background: transparent;">
+				<div>
+					<h5 class="text-uppercase mb-1">LS2N, NANTES</h5>
+					<small class="text-muted">January 2024 - June 2024</small>
 				</div>
+			</div>
 
-				<div class="col-md-4">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2022</span>
-    					<h2>Licence Informatique</h2>
-    					<span class="position">Université de Yaoundé I, Cameroun</span>
-    					<p class="mt-4">Département Mathématique-Informatique /Faculté des sciences.</p>
-    				</div>
+			<p><strong>ROLE :</strong> Developer</p>
+
+			<p><strong>📌 OBJECTIVES :</strong></p>
+			<ul>
+				<li>Research project: "Explaining Graph Neural Networks".</li>
+				<li>Understanding GNN concepts.</li>
+				<li>Studying state-of-the-art explainability techniques.</li>
+				<li>Experiments and comparisons of approaches.</li>
+				<li>Developed web presentation with Flask.</li>
+			</ul>
+
+			<p><strong>🛠️ TECHNOLOGIES & TOOLS :</strong></p>
+			<div class="mb-3">
+				<span class="badge tool-badge bg-primary">Python</span>
+				<span class="badge tool-badge bg-info">Deep Learning</span>
+				<span class="badge tool-badge bg-success">GNN</span>
+				<span class="badge tool-badge bg-primary">Pytorch</span>
+				<span class="badge tool-badge bg-info">pyG</span>
+				
+			</div>
+		</div>
+
+		<div class="counter mt-2 text-center">1/2</div>
+	</div>
+</div>
+
+	
+			<br><br>
+	
+			<!-- EDUCATION -->
+			<div class="row justify-content-center text-center">
+				<div class="col-md-10">
+					<h1 class="big-4">Education</h1>
+					<div class="underline"></div>
 				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
+			</div>
+			<br>
+	
+			<div class="row justify-content-center position-relative">
+				<div class="col-md-10 position-relative">
+					<button class="edu-prev nav-btn btn btn-outline-primary btn-sm">&#8592;</button>
+					<button class="edu-next nav-btn btn btn-outline-primary btn-sm">&#8594;</button>
+	
+					<div class="resume-wrap ftco-animate education-slide active">
+						<div class="d-flex align-items-center mb-2">
+							<!--<img src="images\nantes.jpg" alt="Nantes" style="height:40px; margin-right:10px;">-->
+							<div>
+								<span class="date">2023-2025</span>
+								<h2>Master's Degree in Machine Learning and Natural Language Processing (NLP)</h2>
+								<span class="position">University of Nantes, France</span>
+							</div>
+						</div>
+					</div>
+	
+					<div class="resume-wrap ftco-animate education-slide">
+						<div class="d-flex align-items-center mb-2">
+							<!--<img src="\images\rennes.jpg" alt="Rennes" style="height:40px; margin-right:10px;">-->
+							<div>
+								<span class="date">2022-2023</span>
+								<h2>Bachelor's in Computer Science</h2>
+								<span class="position">University of Rennes I, France</span>
+							</div>
+						</div>
+					</div>
+	
+					<div class="resume-wrap ftco-animate education-slide">
+						<div class="d-flex align-items-center mb-2">
+						<!--<img src="images\yde1.jpg" alt="Yaoundé" style="height:80px; margin-right:50px;">-->
+							<div>
+								<span class="date">2019-2022</span>
+								<h2>Bachelor's in Computer Science</h2>
+								<span class="position">University of Yaoundé I, Cameroon</span>
+							</div>
+						</div>
+					</div>
+	
+					<div class="counter mt-2 text-center">1/3</div>
+				</div>
+			</div>
+			
+			<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-					<a href="https://drive.google.com/file/d/1L-RYilyelrkIeBSMiSuY8nccEC5CCcyz/view?usp=sharing" class="btn btn-primary py-4 px-5" download>Télécharge mon CV</a>
+					<a href="https://drive.google.com/file/d/1BJfJa2VLhSFI8AWE7C_UVXSCyklAkNkK/view?usp=drive_link" class="btn btn-primary py-4 px-5" download>Download my CV</a>
     			</div>
     		</div>
-    	</div>
-    </section>
+	
+		</div>
+	</section>
+	
+	<style>
+	.experience-slide, .education-slide {
+		display: none;
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+	.experience-slide.active, .education-slide.active {
+		display: block;
+		opacity: 1;
+	}
+	
+	.accordion {
+		color: #007bff;
+		cursor: pointer;
+		text-align: left;
+		border: none;
+		background: none;
+		padding: 0;
+	}
+	.panel {
+		display: none;
+		padding: 10px 0;
+	}
+	.panel ul {
+		margin: 0;
+		padding-left: 20px;
+	}
+	.badge {
+		display: inline-block;
+		background-color: #e0e0e0;
+		color: #333;
+		padding: 3px 8px;
+		border-radius: 12px;
+		font-weight: bold;
+		margin-right: 5px;
+		font-size: 0.85rem;
+	}
+	.nav-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.exp-prev { left: -40px; }
+	.exp-next { right: -40px; }
+	.edu-prev { left: -40px; }
+	.edu-next { right: -40px; }
+	</style>
+	
+	<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const updateSlides = (slides, index, counter) => {
+			slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+			counter.textContent = `${index+1}/${slides.length}`;
+		};
+	
+		// EXPERIENCE
+		const expSlides = document.querySelectorAll('.experience-slide');
+		const expPrev = document.querySelector('.exp-prev');
+		const expNext = document.querySelector('.exp-next');
+		const expCounter = document.querySelector('.experience-slide').parentElement.querySelector('.counter');
+		let expIndex = 0;
+	
+		expPrev.addEventListener('click', () => {
+			expIndex = (expIndex - 1 + expSlides.length) % expSlides.length;
+			updateSlides(expSlides, expIndex, expCounter);
+		});
+		expNext.addEventListener('click', () => {
+			expIndex = (expIndex + 1) % expSlides.length;
+			updateSlides(expSlides, expIndex, expCounter);
+		});
+		updateSlides(expSlides, expIndex, expCounter);
+	
+		// EDUCATION
+		const eduSlides = document.querySelectorAll('.education-slide');
+		const eduPrev = document.querySelector('.edu-prev');
+		const eduNext = document.querySelector('.edu-next');
+		const eduCounter = document.querySelector('.education-slide').parentElement.querySelector('.counter');
+		let eduIndex = 0;
+	
+		eduPrev.addEventListener('click', () => {
+			eduIndex = (eduIndex - 1 + eduSlides.length) % eduSlides.length;
+			updateSlides(eduSlides, eduIndex, eduCounter);
+		});
+		eduNext.addEventListener('click', () => {
+			eduIndex = (eduIndex + 1) % eduSlides.length;
+			updateSlides(eduSlides, eduIndex, eduCounter);
+		});
+		updateSlides(eduSlides, eduIndex, eduCounter);
+	
+		// ACCORDIONS
+		const accordions = document.querySelectorAll(".accordion");
+	
+		accordions.forEach(acc => {
+			const panel = acc.parentElement.nextElementSibling;
+			acc.addEventListener("click", () => {
+				panel.style.display = (panel.style.display === "block") ? "none" : "block";
+			});
+		});
+	});
+	</script>
+	
 
    
 
     <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projets</h1>
-            <h2 class="mb-4">Projets</h2>
-            <p>Vous trouverez ci-dessous des exemples de mes projets de ML, Tableau, python, IA.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-				<div class="block-20 zoom-effect" style="background-image: url('images/stream1.png');"></div>
-
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading">Application web de prédiction de salaire avec streamlit</h3>
-                <p>Conception d'une application web permettant de prédire le salaire d'un ingenieur en fonction de son profil,
-					ceci basé sur un modèle de Machine Learning.</p>
-              </div>
-			  <div class="buttons mt-3">
-				<a href="https://drive.google.com/file/d/1RKLsZ-itgy3poPCxyVwlPdxn3Jb-3gx2/view?usp=sharing" class="btn btn-primary py-2 px-3">Vidéo</a>
-				<a href="https://github.com/jordanTchamedeu/web-appstreamlit-ml/blob/master/images_de_l'application/stream1.png" class="btn btn-secondary py-2 px-3">DÉPÔT</a>
-			  </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-				<div class="block-20 zoom-effect" style="background-image: url('images/chatbot.jpg');"></div>
-
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading">chatbot avec Pytorch</a></h3>
-                <p>Implémentation simple d'un chatbot avec PyTorch pour pratiquer les concepts de
-					traitement du langage vus en cours, tels que la tokenization, la stemmatization,
-					bag of words, etc.</p>
-              </div>
-			  <div class="buttons mt-3">
-				<a href="https://drive.google.com/file/d/180FCNuca9QIil1TYEj-g4E-oGW0jfVAx/view?usp=sharing" class="btn btn-primary py-2 px-3">Vidéo</a>
-				<a href="https://github.com/jordanTchamedeu/web-appstreamlit-ml" class="btn btn-secondary py-2 px-3">DÉPÔT</a>
-			  </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-				<div class="block-20 zoom-effect" style="background-image: url('images/proj.png');"></div>
-
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading">Tableau de bord de la Ligue des champions avec Tableau</a></h3>
-                <p>L'objectif principal de ce projet était de tirer des insights pertinents et de présenter les statistiques de cette competition de manière visuellement attrayante.</p>
-              </div>
-			  <div class="buttons mt-3">
-				<!--<a href="https://drive.google.com/file/d/1Niv2TRyfyuwHKxIvnRZ0UzcbWTducsb9/view?usp=sharing" class="btn btn-primary py-2 px-3">Vidéo</a	-->
-				<a href="https://github.com/jordanTchamedeu/TableauDasboard/blob/main/proj.png" class="btn btn-secondary py-2 px-3">DÉPÔT</a>
-			  </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<div class="block-20 zoom-effect" style="background-image: url('images/hex.jpg');"></div>
-
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">Hex Game</a></h3>
-				  <p>Le jeu de Hex est un jeu de stratégie abstrait pour deux joueurs joué sur une grille hexagonale. Les joueurs prennent alternativement des tours pour placer des pièces de leur couleur sur le plateau, l'objectif étant de créer un chemin continu reliant les côtés opposés de leur couleur.</p>
-				</div>
-				<div class="buttons mt-3">
-					<a href="https://github.com/jordanTchamedeu/IA_project/blob/main/images/IA2.png" class="btn btn-secondary py-2 px-3">DÉPÔT</a>
-				  </div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<div class="block-20 zoom-effect" style="background-image: url('images/cuisine.jpg');"></div>
-
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">Classification des recettes de cuisine</a></h3>
-				  <p>La tâche consiste à développer un système capable de classifier automatiquement des
-					recettes de cuisine en déterminant, à partir du titre et des instructions de la recette, si
-					celle-ci correspond à un Plat principal, une Entrée, ou un Dessert.</p>
-				</div>
-				<div class="buttons mt-3">
-					<a href="https://github.com/jordanTchamedeu/tal_project-main" class="btn btn-secondary py-2 px-3">DÉPÔT</a>
-				  </div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container">
-		  <div class="row d-md-flex align-items-center">
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <img src="images/c.jpg" alt="C Language" style="width:100px;height:100px;">
-				  <p><a href="https://drive.google.com/file/d/1GrdRw4_pv6QggCBndlLcGOT61XziQo-J/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">C Certificate</a></p>
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Projects</h1>
+			  <h2 class="mb-4">Projects</h2>
+			  <p>Below you will find examples of my ML, Tableau, Python, and AI projects.</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <div class="block-20 zoom-effect" style="background-image: url('images/stream1.png');"></div>
+  
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading">Web application for salary prediction with Streamlit</h3>
+				  <p>Design of a web application to predict an engineer's salary based on their profile,
+					  based on a Machine Learning model.</p>
+				</div>
+				<div class="buttons mt-3">
+				  <a href="https://drive.google.com/file/d/1RKLsZ-itgy3poPCxyVwlPdxn3Jb-3gx2/view?usp=sharing" class="btn btn-primary py-2 px-3">Video</a>
+				  <a href="https://github.com/jordanTchamedeu/web-appstreamlit-ml/blob/master/images_de_l'application/stream1.png" class="btn btn-secondary py-2 px-3">REPOSITORY</a>
 				</div>
 			  </div>
 			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <img src="images/python.jpg" alt="Python Language" style="width:100px;height:100px;">
-				  <p><a href="https://drive.google.com/file/d/1BVppdkHNIz3ywHFc4T4qLzJ8Ph0WlNof/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">Python Certificate</a></p>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <div class="block-20 zoom-effect" style="background-image: url('images/chatbot.jpg');"></div>
+  
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading">Chatbot with PyTorch</h3>
+				  <p>Simple implementation of a chatbot with PyTorch to practice language processing concepts seen in class, such as tokenization, stemmatization, bag of words, etc.</p>
+				</div>
+				<div class="buttons mt-3">
+				  <a href="https://drive.google.com/file/d/180FCNuca9QIil1TYEj-g4E-oGW0jfVAx/view?usp=sharing" class="btn btn-primary py-2 px-3">Video</a>
+				  <a href="https://github.com/jordanTchamedeu/chatbot" class="btn btn-secondary py-2 px-3">REPOSITORY</a>
 				</div>
 			  </div>
 			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <img src="images/java.jpg" alt="Java Language" style="width:100px;height:100px;">
-				  <p><a href="https://drive.google.com/file/d/1cRutmJyYwSfzP-J5f6hjnwxTCySaRsJk/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">Java Certificate</a></p>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry">
+				  <div class="block-20 zoom-effect" style="background-image: url('images/proj.png');"></div>
+  
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading">Champions League Dashboard with Tableau</h3>
+				  <p>The main goal of this project was to extract relevant insights and present the competition's statistics in a visually appealing way.</p>
 				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-				<div class="block-18">
-				  <div class="text">
-					<img src="images/R.jpg" alt="Java Language" style="width:100px;height:100px;">
-					<p><a href="https://drive.google.com/file/d/1wAVRpsDEwt1aNTe1ofmfVZT9kniOwwWs/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">R Certificate</a></p>
-				  </div>
-				</div>
-			  </div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <img src="images/sql.jpg" alt="HTML Language" style="width:100px;height:100px;">
-				  <p><a href="https://drive.google.com/file/d/1peQxu2MeE3EZH7LHwWCza4f7CmGUAVS1/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">SQL Certificate</a></p>
+				<div class="buttons mt-3">
+				  <!--<a href="https://drive.google.com/file/d/1Niv2TRyfyuwHKxIvnRZ0UzcbWTducsb9/view?usp=sharing" class="btn btn-primary py-2 px-3">Video</a>-->
+				  <a href="https://github.com/jordanTchamedeu/TableauDasboard/blob/main/proj.png" class="btn btn-secondary py-2 px-3">REPOSITORY</a>
 				</div>
 			  </div>
 			</div>
 		  </div>
+	  <br>
+		  <!-- added justify-content-center to center align the last two projects -->
+		  <div class="row d-flex justify-content-center">  
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+					  <div class="block-20 zoom-effect" style="background-image: url('images/hex.jpg');"></div>
+  
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading">Hex Game</h3>
+					<p>Hex is an abstract strategy game for two players played on a hexagonal grid. Players alternate turns placing pieces of their color on the board, aiming to create a continuous path connecting their opposite sides.</p>
+				  </div>
+				  <div class="buttons mt-3">
+					  <a href="https://github.com/jordanTchamedeu/IA_project/blob/main/images/IA2.png" class="btn btn-secondary py-2 px-3">REPOSITORY</a>
+					</div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+					  <div class="block-20 zoom-effect" style="background-image: url('images/cuisine.jpg');"></div>
+  
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading">Recipe classification</h3>
+					<p>The task consists of developing a system able to automatically classify recipes by determining, based on the title and instructions, if the recipe is a main dish, appetizer, or dessert.</p>
+				  </div>
+				  <div class="buttons mt-3">
+					  <a href="https://github.com/jordanTchamedeu/tal_project-main" class="btn btn-secondary py-2 px-3">REPOSITORY</a>
+					</div>
+				</div>
+			  </div>
+		   </div>
 		</div>
 	  </section>
-	  
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>Plus de projets sur<span> Github  </span> </h2>
-						<div class="heading"> <h4> "Without big data, you are blind and deaf and in the middle of a freeway." Geoffrey Moore </h4>
-						<br>
-					</div>
-					</div>
+  
+	  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		  <div class="container">
+			<div class="row d-md-flex align-items-center">
+			  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+				<div class="block-18">
+				  <div class="text">
+					<img src="images/c.jpg" alt="C Language" style="width:100px;height:100px;">
+					<p><a href="https://drive.google.com/file/d/1GrdRw4_pv6QggCBndlLcGOT61XziQo-J/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">C Certificate</a></p>
+				  </div>
 				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+			  </div>
+			  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+				<div class="block-18">
+				  <div class="text">
+					<img src="images/python.jpg" alt="Python Language" style="width:100px;height:100px;">
+					<p><a href="https://drive.google.com/file/d/1BVppdkHNIz3ywHFc4T4qLzJ8Ph0WlNof/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">Python Certificate</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+				<div class="block-18">
+				  <div class="text">
+					<img src="images/java.jpg" alt="Java Language" style="width:100px;height:100px;">
+					<p><a href="https://drive.google.com/file/d/1cRutmJyYwSfzP-J5f6hjnwxTCySaRsJk/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">Java Certificate</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+				  <div class="block-18">
+					<div class="text">
+					  <img src="images/R.jpg" alt="R Language" style="width:100px;height:100px;">
+					  <p><a href="https://drive.google.com/file/d/1wAVRpsDEwt1aNTe1ofmfVZT9kniOwwWs/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">R Certificate</a></p>
+					</div>
+				  </div>
+				</div>
+			  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+				<div class="block-18">
+				  <div class="text">
+					<img src="images/sql.jpg" alt="SQL Language" style="width:100px;height:100px;">
+					<p><a href="https://drive.google.com/file/d/1peQxu2MeE3EZH7LHwWCza4f7CmGUAVS1/view?usp=sharing" class="btn btn-primary py-2 px-3 mt-2">SQL Certificate</a></p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</section>
+		
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			  <!-- <div class="container"> -->
+				  <div class="row justify-content-center">
+					  <div class="col-md-7 ftco-animate text-center">
+							  <h2>More projects on <span>Github</span></h2>
+							  <div class="heading">
+								  <h4>"Without big data, you are blind and deaf and in the middle of a freeway." Geoffrey Moore</h4>
+								  <br>
+							  </div>
+					  </div>
+				  </div>
+			  <!-- </div> -->
+		  </div>
+	  </section>
+  
 
 
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Me contacter</h2>
-            <p>ci dessous toutes les informations pour me contacter!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-8 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Adresse</h3>
-	            <p>Nantes, France</p>
-	          </div>
-          </div>
-          
-          <div class="col-md-8 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Adresse Mail</h3>
-	            <p><a href="mailto:info@yoursite.com">tchamedeuj@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-8 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Téléphone</h3>
-	            <p><a href="#">Voir CV</a></p>
-	          </div>
-          </div>
-		  <div class="col-md-8 col-lg-3 d-flex ftco-animate">
-			<div class="align-self-stretch box p-4 text-center">
+	  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Contact</h1>
+			  <h2 class="mb-4">Contact Me</h2>
+			  <p>Below are all the details to get in touch with me!</p>
+			</div>
+		  </div>
+	  
+		  <div class="row d-flex contact-info mb-5">
+			<div class="col-md-8 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
 				<div class="icon d-flex align-items-center justify-content-center">
-					<span class="icon-globe"></span>
+				  <span class="icon-map-signs"></span>
+				</div>
+				<h3 class="mb-4">Address</h3>
+				<p>Argenteuil, France</p>
+			  </div>
+			</div>
+	  
+			<div class="col-md-8 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-paper-plane"></span>
+				</div>
+				<h3 class="mb-4">Email Address</h3>
+				<p><a href="mailto:info@yoursite.com">tchamedeuj@gmail.com</a></p>
+			  </div>
+			</div>
+			<div class="col-md-8 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-phone2"></span>
+				</div>
+				<h3 class="mb-4">Phone</h3>
+				<p><a href="#">+33 7 74 51 27 40</a></p>
+			  </div>
+			</div>
+			<div class="col-md-8 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-globe"></span>
 				</div>
 				<h3 class="mb-4">RESUME</h3>
-			  <p><a href="#">revenir plus haut</a></p>
+				<p><a href="#">Back to top</a></p>
+			  </div>
 			</div>
-		</div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
+	  
+			<div class="container">
+			  <br>
+			  <br>
+			  <div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<!-- <h2>As tu une<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeoNiMGnK3vWA_tQ6dY-7qHu7ElvfHGOBUSwqgQPZxc7jwgiw/viewform?usp=pp_url" class="btn btn-primary py-3 px-5">Clique ici</a> </h2	-->
+				  <!-- <h2>Do you have a <span>Question?</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeoNiMGnK3vWA_tQ6dY-7qHu7ElvfHGOBUSwqgQPZxc7jwgiw/viewform?usp=pp_url" class="btn btn-primary py-3 px-5">Click here</a></h2> -->
 				</div>
+			  </div>
+			  <br>
+			  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+				<li class="ftco-animate normal-txt">Find me on  </li>
+				<li class="ftco-animate"><a href="https://www.linkedin.com/in/jordan-steve-tchamedeu-0bbab1262/"><span class="icon-linkedin"></span></a></li>  
+				<li class="ftco-animate"><a href="https://x.com/jordantchamis"><span class="icon-twitter"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.facebook.com/jordan.tchamedeu.3"><span class="icon-facebook"></span></a></li>
+			  </ul>
+			  <br>
 			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Retrouve moi sur  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/jordan-steve-tchamedeu-0bbab1262/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://x.com/jordantchamis"><span class="icon-twitter"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.facebook.com/jordan.tchamedeu.3"><span class="icon-facebook"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+		  </div>
+		</div>
+	</section>
+	  
+
 
 
 
